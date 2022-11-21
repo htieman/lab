@@ -16,7 +16,7 @@ lass Account:
         if amount <= 0:
             return False
         elif amount > 0:
-            self._account_balance += amount
+            self.__account_balance += amount
             return True
 
     def withdraw(self, amount: int) -> None:
@@ -29,8 +29,8 @@ lass Account:
             return False
         elif amount > 0:
             self._account_balance -= amount
-            if self._account_balance < 0:
-                self._account_balance = 0
+            if self.__account_balance < 0:
+                self.__account_balance = 0
             return True
 
     def get_balance(self) -> int:
@@ -38,11 +38,11 @@ lass Account:
         returns account balance
         :return: account balance
         """
-        return self._account_balance
+        return self.__account_balance
 
     def get_name(self) -> str:
         """
         returns account name
         :return: account name
         """
-        return self._account_name
+        return self.__account_name
