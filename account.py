@@ -29,6 +29,8 @@ lass Account:
             return False
         elif amount > 0:
             self._account_balance -= amount
+            if self._account_balance < 0:
+                self._account_balance = 0
             return True
 
     def get_balance(self) -> int:
